@@ -5,7 +5,7 @@ namespace RiskManagement.Service
     public class Order
     {
         public int Id { get; set; }
-        public decimal Amount { get; set; }
+        public string Name { get; set; }
         public Address BillingAddress { get; set; }
         public Address ShippingAddress { get; set; }
         public IEnumerable<OrderItem> Items { get; set; }

@@ -43,7 +43,7 @@ namespace RiskManagement.Service
         {
             return new OrderInfoRequest
             {
-                TotalAmount = order.Amount,
+                FullName = order.Name,
                 BillingAddress = new AddressInfo(order.BillingAddress.City, order.BillingAddress.State, order.BillingAddress.Country),
                 ShippingAddress = new AddressInfo(order.ShippingAddress.City, order.ShippingAddress.State, order.ShippingAddress.Country),
                 Items = order.Items.Select(x => new ItemInfo(x.Description, x.Brand, x.Type, x.Amount))

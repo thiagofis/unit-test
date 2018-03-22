@@ -4,7 +4,7 @@ namespace RiskManagement.Gateway
 {
     public class OrderInfoRequest
     {
-        public decimal TotalAmount { get; set; }
+        public string FullName { get; set; }
         public IEnumerable<ItemInfo> Items { get; set; }
         public AddressInfo BillingAddress { get; set; }
         public AddressInfo ShippingAddress { get; set; }
