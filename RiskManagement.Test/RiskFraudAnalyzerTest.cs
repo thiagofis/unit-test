@@ -31,7 +31,7 @@ namespace RiskManagement.Test
             var order = new Order
             {
                 Id = 64,
-                Name = "Fulano de Tal",
+                UserName = "Fulano de Tal",
                 BillingAddress = new Address { City = "Porto", Country = "Portugal", State = "Porto" },
                 ShippingAddress = new Address { City = "Porto", Country = "Portugal", State = "Porto" },
                 Items = new List<OrderItem> { new OrderItem { Amount = 10, Brand = "Nike", Description = "Shoes", Type = "Summer" } }

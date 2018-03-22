@@ -4,7 +4,12 @@ namespace RiskManagement.Gateway
 {
     public class OrderInfoRequest
     {
-        public string FullName { get; set; }
+        public OrderInfoRequest(string fullUserName)
+        {
+            FullUserName = fullUserName ?? throw new System.ArgumentNullException(nameof(fullUserName));
+        }
+
+        public string FullUserName { get; }
         public IEnumerable<ItemInfo> Items { get; set; }
         public AddressInfo BillingAddress { get; set; }
         public AddressInfo ShippingAddress { get; set; }
@@ -14,29 +19,31 @@ namespace RiskManagement.Gateway
     {
         public ItemInfo(string description, string brand, string type, decimal amount)
         {
-            Description = description;
-            Brand = brand;
-            Type = type;
+
+
+            Description = description ?? throw new System.ArgumentNullException(nameof(description));
+            Brand = brand ?? throw new System.ArgumentNullException(nameof(brand));
+            Type = type ?? throw new System.ArgumentNullException(nameof(type));
             Amount = amount;
         }
 
-        public string Description { get; set; }
-        public string Brand { get; set; }
-        public string Type { get; set; }
-        public decimal Amount { get; set; }
+        public string Description { get; }
+        public string Brand { get; }
+        public string Type { get; }
+        public decimal Amount { get; }
     }
 
     public class AddressInfo
     {
         public AddressInfo(string city, string state, string country)
         {
-            City = city;
-            State = state;
-            Country = country;
+            City = city ?? throw new System.ArgumentNullException(nameof(city));
+            State = state ?? throw new System.ArgumentNullException(nameof(state));
+            Country = country ?? throw new System.ArgumentNullException(nameof(country));
         }
 
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Country { get; set; }
+        public string City { get; }
+        public string State { get; }
+        public string Country { get; }
     }
 }
