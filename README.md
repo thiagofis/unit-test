@@ -1,6 +1,11 @@
-# xUnit suite project
+# Clean unit test (powered by xUnit)
 
- From MSTest to xUnit. Building a tests’ suite with xUnit, AutoFixture and NSubstitute.
+## Description
+The target of this project is to demonstrate how create a clean unit test suit project. The focus on test method needs to be the relevant data.
+
+## Example
+
+The example below will illustrate the basic principle of Clean method test:  It focuses only relevant test types and data without the need for you to explicitly define each value object properties, mock dependencies or objects initializations, saving you the effort of explicitly code with one.
 
 ### Test scenario:
 
@@ -10,7 +15,7 @@ When: receive a red flag
 Then: returns a fraud label 
 ```
 
-### MSTest method
+### With default MSTest method
 
 * [MSTest](https://www.nuget.org/packages/MSTest.TestFramework/) -  Native unit testing frameworks for .Net framework.
 * [xunit.runner.visualstudio](https://github.com/moq/moq) - The most popular and ~~friendly~~ mocking framework for .NET.
@@ -55,7 +60,7 @@ public void Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
 ```
 
 
- ### xUnit theory custom method
+ ### With clean test method (powered by xUnit)
 
 * [xunit](https://xunit.github.io/) - Open source, community-focused unit testing tool for the .NET Framework.
 * [xunit.runner.visualstudio](https://www.nuget.org/packages/xunit.runner.visualstudio/) - Test Explorer runner for the xUnit.net framework.
