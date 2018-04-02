@@ -1,11 +1,11 @@
 # Clean unit test (powered by xUnit)
 
 ## Description
-The target of this project is to demonstrate how create a clean unit test suit project. The focus on test method needs to be the relevant data.
+The target of this project is to demonstrate how to create a clean unit test suit project. The test method focus should be the relevant data.
 
 ## Example
 
-The example below will illustrate the basic principle of Clean method test:  It focuses only relevant test types and data without the need for you to explicitly define each value object properties, mock dependencies or objects initializations, saving you the effort of explicitly code with one.
+The example below will illustrate the basic principle of Clean method test:  It focuses on relevant test types and data without the need to explicitly define each value object properties, mock dependencies or objects initializations. Meaning that you should only apply your effort on what really matters.
 
 ### Test scenario:
 
