@@ -15,6 +15,10 @@ When: receive a red flag
 Then: returns a fraud label 
 ```
 
+### Sequance Diagram
+
+![Risk Management Sequence Flow](https://raw.githubusercontent.com/thiagofis/xunit/master/Risk%20Management%20sequence%20flow.png)
+
 ### With default MSTest method
 
 * [MSTest](https://www.nuget.org/packages/MSTest.TestFramework/) -  Native unit testing frameworks for .Net framework.
