@@ -22,7 +22,7 @@ Then: returns a fraud label
 ### With default MSTest method
 
 * [MSTest](https://www.nuget.org/packages/MSTest.TestFramework/) -  Native unit testing frameworks for .Net framework.
-* [xunit.runner.visualstudio](https://github.com/moq/moq) - The most popular and ~~friendly~~ mocking framework for .NET.
+* [Moq](https://github.com/moq/moq) - The most popular and ~~friendly~~ mocking framework for .NET.
 ```c#
 [TestMethod]
 public void Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
