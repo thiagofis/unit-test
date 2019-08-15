@@ -25,7 +25,7 @@ Then: returns a fraud label
 * [Moq](https://github.com/moq/moq) - The most popular and ~~friendly~~ mocking framework for .NET.
 ```c#
 [TestMethod]
-public void Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
+public void Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
 {
     //Assemble
     var expected = Label.Fraud;
@@ -76,7 +76,7 @@ public void Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
 ```c#
 [AutoFixtureNSustituteData] //Custom inline data attribute
 [Theory]
-public void Analize_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse, 
+public void Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse, 
 RiskFraudAnalyzer sut)
 {
 	//Assemble       
