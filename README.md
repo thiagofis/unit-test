@@ -17,7 +17,7 @@ Then: returns a fraud label
 
 ### Sequance Diagram
 
-![Risk Management Sequence Flow](https://github.com/thiagofis/xunit/blob/master/Risk%20Management%20sequence%20flow.png)
+![Risk Management Sequence Diagram](https://github.com/thiagofis/xunit/blob/master/risk%20management%20sequence%20diagram.png)
 
 ### With default MSTest method
 
