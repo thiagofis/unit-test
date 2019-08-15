@@ -2,6 +2,6 @@
 {
     public interface IRiskFraudAnalyzer
     {
-        Label Analize(Order order);
+        Label Analyze(Order order);
     }
 }
