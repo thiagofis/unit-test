@@ -19,7 +19,7 @@ namespace RiskManagement.Test
         //2 - Moq
 
         [TestMethod]
-        public void Ex1_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
+        public void Ex1_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
         {
             //Assemble
             var expected = Label.Fraud;
@@ -47,7 +47,7 @@ namespace RiskManagement.Test
             riskFraudClientServiceMock.Setup(x => x.CheckRisk(It.IsAny<OrderInfoRequest>())).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             MS.Assert.AreEqual(expected, result);
@@ -64,7 +64,7 @@ namespace RiskManagement.Test
         //3 - AutoFixture
 
         [TestMethod]
-        public void Ex2_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
+        public void Ex2_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
         {
             //Assemble
             var expected = Label.Fraud;
@@ -83,7 +83,7 @@ namespace RiskManagement.Test
             riskFraudClientServiceMock.Setup(x => x.CheckRisk(It.IsAny<OrderInfoRequest>())).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             MS.Assert.AreEqual(expected, result);
@@ -120,7 +120,7 @@ namespace RiskManagement.Test
             riskFraudClientService.CheckRisk(Arg.Any<OrderInfoRequest>()).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             MS.Assert.AreEqual(expected, result);
@@ -137,7 +137,7 @@ namespace RiskManagement.Test
         //3 - AutoFixture       
 
         [Fact] // TestMethod = Fact
-        public void Ex4_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
+        public void Ex4_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
         {
             //Assemble
             var expected = Label.Fraud;
@@ -156,7 +156,7 @@ namespace RiskManagement.Test
             riskFraudClientService.CheckRisk(Arg.Any<OrderInfoRequest>()).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             Xunit.Assert.Equal(expected, result);
@@ -178,7 +178,7 @@ namespace RiskManagement.Test
         [InlineData(Label.Suspicious, RiskFlag.Yellow)]
         [InlineData(Label.Fraud, RiskFlag.Red)]
         [Theory]
-        public void Ex5_Analize_ReceivedAFlagRisk_ReturnsLabel(Label expected, RiskFlag flag)
+        public void Ex5_Analyze_ReceivedAFlagRisk_ReturnsLabel(Label expected, RiskFlag flag)
         {
             //Assemble           
             var riskFraudClientService = Substitute.For<IRiskFraudClientService>();
@@ -195,7 +195,7 @@ namespace RiskManagement.Test
             riskFraudClientService.CheckRisk(Arg.Any<OrderInfoRequest>()).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             Xunit.Assert.Equal(expected, result);
@@ -218,7 +218,7 @@ namespace RiskManagement.Test
 
         [AutoFixtureData]
         [Theory]
-        public void Ex6_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse)
+        public void Ex6_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse)
         {
             //Assemble       
             var expected = Label.Fraud;
@@ -231,7 +231,7 @@ namespace RiskManagement.Test
             riskFraudClientService.CheckRisk(Arg.Any<OrderInfoRequest>()).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             Xunit.Assert.Equal(expected, result);
@@ -254,7 +254,7 @@ namespace RiskManagement.Test
 
         [AutoFixtureNSustituteData]
         [Theory]
-        public void Ex7_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse, RiskFraudAnalyzer sut)
+        public void Ex7_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel(Order order, RiskResponse riskResponse, RiskFraudAnalyzer sut)
         {
             //Assemble       
             var expected = Label.Fraud;            
@@ -264,7 +264,7 @@ namespace RiskManagement.Test
             sut.RiskFraudClientService.CheckRisk(Arg.Any<OrderInfoRequest>()).Returns(riskResponse);
 
             //Act
-            var result = sut.Analize(order);
+            var result = sut.Analyze(order);
 
             //Assert
             Xunit.Assert.Equal(expected, result);
