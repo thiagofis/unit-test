@@ -12,7 +12,7 @@ namespace RiskManagement.Service
 
         public IRiskFraudClientService RiskFraudClientService { get; private set; }
 
-        public Label Analize(Order order)
+        public Label Analyze(Order order)
         {
             var request = GenerateRequest(order);
 
