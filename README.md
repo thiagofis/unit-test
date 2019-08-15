@@ -56,7 +56,7 @@ public void Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
     riskFraudClientServiceMock.Setup(x => x.CheckRisk(It.IsAny<OrderInfoRequest>())).Returns(riskResponse);
 
     //Act
-    var result = sut.Analize(order);
+    var result = sut.Analyze(order);
 
     //Assert
     MS.Assert.AreEqual(expected, result);
