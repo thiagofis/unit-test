@@ -101,7 +101,7 @@ namespace RiskManagement.Test
 
 
         [TestMethod]
-        public void Ex3_Analize_ReceivedARedFlagRisk_ReturnsFraudLabel()
+        public void Ex3_Analyze_ReceivedARedFlagRisk_ReturnsFraudLabel()
         {
             //Assemble
             var expected = Label.Fraud;
